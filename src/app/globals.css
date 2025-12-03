@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  --foreground: #e0eafc;
+  --accent: #00ffe7;
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-blur: 16px;
+  --font-sans: 'Geist', 'Segoe UI', Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    --foreground: #e0eafc;
+    --accent: #00ffe7;
+    --glass-bg: rgba(30, 41, 59, 0.8);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  transition: --background 0.5s;
+}
