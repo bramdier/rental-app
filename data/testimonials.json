@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Ezra Mirael",
+    "role": "Mahasiswa",
+    "content": "Pelayanan sangat memuaskan, alat yang disewakan berkualitas tinggi dan proses sewa sangat mudah. Recommended!",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Abraham Siregar",
+    "role": "Event Organizer",
+    "content": "Proses sewa mudah dan cepat. Alat dalam kondisi sangat baik, mendukung kesuksesan event kami. Terima kasih!",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Dhea Octa",
+    "role": "Anggota Gereja",
+    "content": "Selalu puas dengan layanan dan kualitas alat. Tim sangat responsif dan profesional. Akan sewa lagi di event berikutnya!",
+    "rating": 5
+  }
+]

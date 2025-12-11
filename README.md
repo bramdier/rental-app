@@ -1,8 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rental HT Abradhe - Professional Equipment Rental Website
+
+A modern, clean rental website built with Next.js 15, TypeScript, and Tailwind CSS. Features a beautiful hero section, product listings, testimonials, and a simple CMS for content management.
+
+## Features
+
+- 🎨 **Modern, Clean UI** - Beautiful, responsive design with smooth animations
+- 🚀 **Classy Hero Section** - Eye-catching hero with gradients and modern styling
+- 📦 **Product Management** - Display rental equipment with detailed information
+- 💬 **Testimonials** - Showcase customer reviews and ratings
+- 🔧 **Simple CMS** - Easy-to-use admin panel for managing content
+- 📱 **Fully Responsive** - Works perfectly on all devices
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,15 +31,52 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## CMS Admin Panel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Access the admin panel at [http://localhost:3000/admin](http://localhost:3000/admin)
+
+**Default Password:** `admin123`
+
+To change the password, set the `ADMIN_PASSWORD` environment variable:
+
+```bash
+# Create a .env.local file
+ADMIN_PASSWORD=your_secure_password
+```
+
+### CMS Features
+
+- **Product Management**: Add, edit, and delete rental products
+- **Testimonial Management**: Manage customer testimonials and ratings
+- **Simple Authentication**: Password-protected admin access
+- **Data Storage**: Content is stored in JSON files in the `data/` directory
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── admin/          # CMS admin panel
+│   ├── api/            # API routes for CMS
+│   ├── components/     # React components
+│   ├── data/          # Initial data (legacy)
+│   └── types/         # TypeScript types
+├── lib/
+│   └── data.ts        # Data management utilities
+└── public/
+    └── images/        # Product images
+```
+
+## Technologies Used
+
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **React 19** - UI library
 
 ## Learn More
 
@@ -26,8 +84,6 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
