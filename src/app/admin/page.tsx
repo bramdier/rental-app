@@ -39,7 +39,7 @@ export default function AdminPage() {
       } else {
         setError('Invalid password')
       }
-    } catch (err) {
+    } catch {
       setError('Login failed')
     }
   }
@@ -62,7 +62,7 @@ export default function AdminPage() {
     try {
       await fetch(`/api/products?id=${id}`, { method: 'DELETE' })
       loadProducts()
-    } catch (err) {
+    } catch {
       alert('Failed to delete product')
     }
   }
@@ -73,7 +73,7 @@ export default function AdminPage() {
     try {
       await fetch(`/api/testimonials?id=${id}`, { method: 'DELETE' })
       loadTestimonials()
-    } catch (err) {
+    } catch {
       alert('Failed to delete testimonial')
     }
   }
@@ -106,7 +106,7 @@ export default function AdminPage() {
       }
       setEditingProduct(null)
       loadProducts()
-    } catch (err) {
+    } catch {
       alert('Failed to save product')
     }
   }
@@ -138,7 +138,7 @@ export default function AdminPage() {
       }
       setEditingTestimonial(null)
       loadTestimonials()
-    } catch (err) {
+    } catch {
       alert('Failed to save testimonial')
     }
   }

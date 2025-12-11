@@ -1,13 +1,16 @@
 import { Product } from '../types/Product'
 import WhatsAppButton from './WhatsAppButton'
+import Image from 'next/image'
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1">
-      <div className="h-64 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center overflow-hidden">
-        <img
+      <div className="h-64 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center overflow-hidden relative">
+        <Image
           src={`/images/${product.image}`}
           alt={product.name}
+          width={300}
+          height={300}
           className="w-4/5 h-4/5 object-contain transition-transform duration-300 group-hover:scale-110"
         />
       </div>

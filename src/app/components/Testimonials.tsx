@@ -31,7 +31,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-slate-700 mb-6 text-sm leading-relaxed italic">"{t.content}"</p>
+              <p className="text-slate-700 mb-6 text-sm leading-relaxed italic">&ldquo;{t.content}&rdquo;</p>
 
               <div className="pt-4 border-t border-slate-100">
                 <h4 className="font-bold text-slate-800">{t.name}</h4>

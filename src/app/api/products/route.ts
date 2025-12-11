@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const products = getProducts()
     return NextResponse.json(products)
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to fetch products' }, { status: 500 })
   }
 }
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     saveProducts(products)
     
     return NextResponse.json(newProduct, { status: 201 })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to create product' }, { status: 500 })
   }
 }
@@ -48,7 +48,7 @@ export async function PUT(request: NextRequest) {
     saveProducts(products)
     
     return NextResponse.json(products[index])
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to update product' }, { status: 500 })
   }
 }
@@ -67,7 +67,7 @@ export async function DELETE(request: NextRequest) {
     
     saveProducts(filtered)
     return NextResponse.json({ success: true })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to delete product' }, { status: 500 })
   }
 }
